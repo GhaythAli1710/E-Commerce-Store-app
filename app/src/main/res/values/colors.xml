@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="home">#F40A0A</color>
+    <color name="search">#E6D116</color>
+    <color name="camera">#5813D3</color>
+
+    <color name="home_40">#66F40A0A</color>
+    <color name="search_40">#66E6D116</color>
+    <color name="camera_40">#665813D3</color>
 </resources>

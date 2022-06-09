@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
@@ -31,9 +30,7 @@ public class SignupActivity extends AppCompatActivity {
         email = findViewById(R.id.emailId);
         password = findViewById(R.id.passId);
 
-        btn6.setOnClickListener(v -> {
-            action();
-        });
+        btn6.setOnClickListener(v -> action());
     }
 
     private void action() {
@@ -41,8 +38,6 @@ public class SignupActivity extends AppCompatActivity {
         final String myEmail = email.getText().toString().trim();
         final String myPassword = password.getText().toString().trim();
 
-//        Toast.makeText(SignupActivity.this,
-//                myName + '*' + myEmail + '*' + myPassword, Toast.LENGTH_SHORT).show();
         if (TextUtils.isEmpty(myName)){
             name.setError("Enter your name please");
             name.requestFocus();
@@ -59,20 +54,16 @@ public class SignupActivity extends AppCompatActivity {
 
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
-                URLs.ROOT_URL,
+                URLs.URL_SIGNUP,
                 this::responseAction,
                 this::errorAction
         ) {
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> params = new HashMap<String, String>();
-//                params.put("Content-Type", "application/json");
+            protected Map<String, String> getParams() {
+                Map<String,String> params = new HashMap<>();
                 params.put("username", myName);
                 params.put("email", myEmail);
                 params.put("password", myPassword);
-//                params.put("c_password", confPassword);
-//                Toast.makeText(SignupActivity.this,
-//                        "OK", Toast.LENGTH_SHORT).show();
                 return params;
             }
         };

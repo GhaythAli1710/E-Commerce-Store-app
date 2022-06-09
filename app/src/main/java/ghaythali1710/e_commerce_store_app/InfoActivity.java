@@ -1,7 +1,6 @@
 package ghaythali1710.e_commerce_store_app;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;

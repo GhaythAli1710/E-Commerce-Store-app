@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bubbleNavigation"/>
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bubbleNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_title="Home"
+            app:bt_active="true"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_colorActive="@color/home"
+            app:bt_colorInactive="@color/black"
+            android:layout_marginRight="12dp"
+            tools:ignore="RtlHardcoded" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_title="Camera"
+            app:bt_active="true"
+            app:bt_icon="@drawable/ic_camera"
+            app:bt_colorActive="@color/camera"
+            app:bt_colorInactive="@color/black"
+            android:layout_marginLeft="12dp"
+            tools:ignore="RtlHardcoded" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_title="Search"
+            app:bt_active="true"
+            app:bt_icon="@drawable/ic_search"
+            app:bt_colorActive="@color/search"
+            app:bt_colorInactive="@color/black"
+            android:layout_marginLeft="10dp"
+            tools:ignore="RtlHardcoded" />
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+</RelativeLayout>

@@ -1,11 +1,9 @@
 package ghaythali1710.e_commerce_store_app;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -64,15 +62,13 @@ public class LoginActivity extends AppCompatActivity {
                 Request.Method.POST,
                 URLs.URL_LOGIN,
                 this::responseAction,
-                error -> {}
+                this::errorAction
         ) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String,String> params = new HashMap<>();
                 params.put("username", myUserName);
                 params.put("password", myPassword);
-                Log.d("GH",myUserName + "1");
-                Log.d("GH",myPassword + "1");
                 return params;
             }
         };
@@ -80,16 +76,21 @@ public class LoginActivity extends AppCompatActivity {
                 .AddToRequestQueue(stringRequest);
     }
 
+    private void errorAction(VolleyError Error) {
+    }
+
     public void responseAction(String response){
-        Log.d("GH","1");
         try {
-            Log.d("GH","2");
             JSONObject obj = new JSONObject(response);
-            JSONObject userJson = obj.getJSONObject("success");
-            User user = new User(userJson.getString("token"));
-            SessionManager.getInstance(getApplicationContext()).userLogin(user);
-            finish();
-            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+            if (obj.getBoolean("success")){
+                JSONObject userJson = obj.getJSONObject("data");
+                User user = new User(userJson.getString("token"));
+                SessionManager.getInstance(getApplicationContext()).userLogin(user);
+                finish();
+                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+            }else{
+                Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }

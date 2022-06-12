@@ -3,12 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/activity_home.xml" value="0.12158054711246201" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/drawable/ic_camera.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/drawable/ic_search.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/drawable/ic_store.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/drawable/round_corners.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/activity_home.xml" value="0.1583011583011583" />
         <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/activity_info.xml" value="0.22826086956521738" />
         <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
         <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/activity_permission.xml" value="0.22826086956521738" />
         <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/activity_signup.xml" value="0.2" />
         <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/fragment_camera.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/layout/fragment_store.xml" value="0.1" />
+        <entry key="..\:/My Projects/E-Commerce-Store-app/app/src/main/res/menu/bottom_bar_menu.xml" value="0.136" />
       </map>
     </option>
   </component>

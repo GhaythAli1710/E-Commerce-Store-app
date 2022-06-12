@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/itemHomeBottomBar"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        app:cnb_iconColor="@color/black"
+        app:cnb_backgroundColor="@color/black_40"/>
+
+    <item
+        android:id="@+id/itemCameraBottomBar"
+        android:title="@string/camera"
+        android:icon="@drawable/ic_camera"
+        app:cnb_iconColor="@color/black"
+        app:cnb_backgroundColor="@color/black_40"/>
+
+    <item
+        android:id="@+id/itemSearchBottomBar"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search"
+        app:cnb_iconColor="@color/black"
+        app:cnb_backgroundColor="@color/black_40"/>
+</menu>

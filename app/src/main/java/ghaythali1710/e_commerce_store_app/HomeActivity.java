@@ -3,9 +3,9 @@ package ghaythali1710.e_commerce_store_app;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import java.util.Objects;
@@ -26,8 +26,16 @@ public class HomeActivity extends AppCompatActivity {
                         new HomeFragment()
                 ).commit();
         bottomBarMenu();
-        fab();
+        test();
+    }
 
+    void test(){
+        ImageButton imageButton;
+        imageButton = findViewById(R.id.fabBtn);
+        imageButton.setOnClickListener(v -> {
+            startActivity(new Intent(HomeActivity.this,MainActivity2.class));
+            finish();
+        });
     }
 
     @SuppressLint("SetTextI18n")

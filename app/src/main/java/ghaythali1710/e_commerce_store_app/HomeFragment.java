@@ -1,12 +1,19 @@
 package ghaythali1710.e_commerce_store_app;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,8 +31,13 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomeFragment() {
-        // Required empty public constructor
+    private CustomAdapter adapter;
+    private Context mCtx;
+
+    public HomeFragment(){}
+
+    public HomeFragment(Context context) {
+        this.mCtx = context;
     }
 
     /**
@@ -58,7 +70,25 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.rvClasses);
+        List<ClassObj> list = getClassesList();
+        recyclerView.setHasFixedSize(true);
+        adapter=new CustomAdapter(list,R.layout.rv_item_design,R.id.name_item,R.id.image_item);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.mCtx,LinearLayoutManager.HORIZONTAL,false));
+//        recyclerView.computeVerticalScrollExtent();
+        recyclerView.setAdapter(adapter);
+        return view;
     }
+
+    private List<ClassObj> getClassesList(){
+        List<ClassObj> list = new ArrayList<>();
+        list.add(new ClassObj("T Shirt",R.drawable.t_shirt));
+        list.add(new ClassObj("Shoes",R.drawable.shoes));
+        list.add(new ClassObj("Short",R.drawable.short_men));
+        list.add(new ClassObj("Jacket",R.drawable.jacket));
+        list.add(new ClassObj("Buy Shirt",R.drawable.buy_shirt));
+        return list;
+    }
+
 }

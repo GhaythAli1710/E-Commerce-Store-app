@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="5dp"
+    tools:ignore="RtlSymmetry">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/image_item"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/t_shirt"
+                tools:ignore="ContentDescription,HardcodedText,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/name_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:paddingEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="@string/ghayth"
+                tools:ignore="RtlSymmetry,SmallSp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

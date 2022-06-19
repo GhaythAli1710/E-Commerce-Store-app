@@ -1,74 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:id="@+id/fragmentesContainerId"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigationDrawer"
+    app:appbarTitleTextSize="10dp"
+    app:primaryMenuItemTextColor="@color/black"
+    app:navigationDrawerBackgroundColor="@color/back"
+    app:appbarColor="@color/white"
     tools:context=".HomeActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:orientation="horizontal"
-        tools:ignore="UselessParent">
+    <RelativeLayout
+        android:id="@+id/fragmentesContainerId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/store_string">
 
-        <com.ismaeldivita.chipnavigation.ChipNavigationBar
-            android:id="@+id/bottomBarId"
+        <include
+            layout="@layout/custom_bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/round_corners"
-            android:elevation="8dp"
-            android:minHeight="48dp"
-            android:paddingTop="5dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="4dp"
-            android:layout_gravity="center"
-            app:cnb_menuResource="@menu/bottom_bar_menu"
-            app:cnb_orientationMode="horizontal"
-            app:cnb_radius="8dp"
-            app:cnb_unselectedColor="@color/black"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="0">
-
-            <ImageButton
-                android:id="@+id/fabBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/round_corners"
-                android:backgroundTint="@color/black"
-                android:contentDescription="@string/todo"
-                android:padding="12dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/ic_store" />
-
-            <TextView
-                android:id="@+id/fabCounter"
-                style="@style/Widget.Design.FloatingActionButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:layout_marginStart="35dp"
-                android:text="@string/_10"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer>

@@ -7,4 +7,11 @@
     <string name="search">search</string>
     <string name="todo">TODO</string>
     <string name="_10">10</string>
+    <string name="my_store">#MY STORE</string>
+    <string name="category">Category</string>
+    <string name="common">Common</string>
+    <string name="ghayth">ghayth</string>
+    <string name="e_commerce_store">E Commerce Store</string>
+    <string name="store">Store</string>
+    <string name="version">version 0.0.0</string>
 </resources>
